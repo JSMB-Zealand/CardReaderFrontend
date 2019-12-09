@@ -57,54 +57,58 @@
     <div class="search-box">
         <input class="form-control" id="myInput" type="text" placeholder="Search by name..">
     </div>
-    <div class="collapse-section create-new-card ">
-        <p>
-            <a class="btn btn-primary d-flex justify-content-center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Create new user's card
-            </a>
-        </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                <input name="fid" pattern=".{2,}" required title="2 characters minimum"  id="addId" placeholder="Id"/> 
-                  <br>
-                  <input name="fname" pattern=".{2,}" required title="2 characters minimum"   id= "addName" placeholder="Name"/>
-                  <br>
-                  <input name="frank" pattern=".{2,}" required title="2 characters minimum"   id= "addRank" placeholder ="Rank"/>
-                  <br>
-                  <button class="btn btn-primary" id="addCardButton">Add a Card</button>
-                </div>
-          </div>
-    </div>
 
-    <div class="collapse-section-2 delete-new-card ">
-        <p>
-            <a class="btn btn-primary d-flex justify-content-center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Delete user's card
+
+
+    <div id="accordion">
+
+        <div class="card card-first">
+          <div class="card-header">
+            <a class="card-link text-center  " data-toggle="collapse" href="#collapseOne">
+              Add new user's card
             </a>
-        </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+                <input name="fid" pattern=".{2,}" required title="2 characters minimum"  id="addId" placeholder="Id"/> 
+                <br>
+                <input name="fname" pattern=".{2,}" required title="2 characters minimum"   id= "addName" placeholder="Name"/>
+                <br>
+                <input name="frank" pattern=".{2,}" required title="2 characters minimum"   id= "addRank" placeholder ="Rank"/>
+                <br>
+                <button class="btn btn-primary" id="addCardButton">Add a Card</button>
+              </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Delete card
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
                 <input id="deleteInput" placeholder="Delete by ID" />
                 <button class="btn btn-primary" id="delButton">Delete</button>
-                <div id="contentDelete"></div>
-                </div>
+                <div id="contentDelete"></div>            </div>
           </div>
-    </div>
-
-    <div class="collapse-section-3 show-map-card ">
-        <p>
-            <a class="btn btn-primary d-flex justify-content-center" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
               Map
             </a>
-        </p>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                <div id="googleMap" style="width:100%;height:400px;"></div>
-                </div>
           </div>
-    </div>
-
-
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body" id="map-card-body">
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
 
 
 

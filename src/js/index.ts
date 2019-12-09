@@ -76,11 +76,11 @@ axios.get<Entry[]>(entryUri)
             }
           else
             {
-              tableHead ='<thead class="index-table-head"><tr><th scope="col">Action</th><th scope="col">Card #</th><th scope="col">Name</th><th scope="col">Rank</th></tr></thead>';
+              tableHead ='<thead class="index-table-head"><th scope="col">Card #</th><th scope="col">Name</th><th scope="col">Rank</th></tr></thead>';
 
               // result += "<li> "+user.id  +"</li>" 
             // result += ' <div class="flex-table row"><div class="flex-row first" role="cell"><span class="edit"> <button type="submit">    <i class="fas fa-edit"></i><span>edit</span></button> </span><span class="delete"><button type="submit">    <i class="fas fa-trash"></i><span>delete</span></button> </span> </div><div class="flex-row">'+ user.id + '</div><div class="flex-row">' + user.name +   '</div><div class="flex-row">'+ user.rank + '</div>';      
-             result +='<tr><th scope="row"> <span class="edit"> <button type="submit"><i class="fas fa-edit"></i><span>edit</span></button> </span><span class="delete"><button type="submit"><i class="fas fa-trash"></i><span>delete</span></button> </span> </th><td>'+ user.id+'</td><td>'+user.name+'</td><td>'+user.rank+'</td></tr>'
+             result +='</th><td>'+ user.id+'</td><td>'+user.name+'</td><td>'+user.rank+'</td></tr>'
 
              
             }

@@ -70,11 +70,11 @@
           </div>
           <div id="collapseOne" class="collapse show" data-parent="#accordion">
             <div class="card-body">
-                <input name="fid" pattern=".{2,}" required title="2 characters minimum"  id="addId" placeholder="Id"/> 
+                <input name="fid" class="form-control" pattern=".{2,}" required title="2 characters minimum"  id="addId" placeholder="Id"/> 
                 <br>
-                <input name="fname" pattern=".{2,}" required title="2 characters minimum"   id= "addName" placeholder="Name"/>
+                <input name="fname" class="form-control" pattern=".{2,}" required title="2 characters minimum"   id= "addName" placeholder="Name"/>
                 <br>
-                <input name="frank" pattern=".{2,}" required title="2 characters minimum"   id= "addRank" placeholder ="Rank"/>
+                <input name="frank" class="form-control" pattern=".{2,}" required title="2 characters minimum"   id= "addRank" placeholder ="Rank"/>
                 <br>
                 <button class="btn btn-primary" id="addCardButton">Add a Card</button>
               </div>
@@ -89,8 +89,8 @@
           </div>
           <div id="collapseTwo" class="collapse" data-parent="#accordion">
             <div class="card-body">
-                <input id="deleteInput" placeholder="Delete by ID" />
-                <button class="btn btn-primary" id="delButton">Delete</button>
+                <input class="form-control" id="deleteInput" placeholder="Delete by ID" />
+                <button class="btn btn-primary" id="delButton" style="margin-top:20px">Delete</button>
                 <div id="contentDelete"></div>            </div>
           </div>
         </div>
